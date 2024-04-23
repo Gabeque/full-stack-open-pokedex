@@ -10,6 +10,11 @@ app.get('/version', (req, res) => {
   res.send('1') // change this string to ensure a new version deployed
 })
 
+// health check endpoint to ensure the server is up
+app.get('/health', (req, res) => {
+  res.send('ok')
+})
+
 app.listen(PORT, () => {
   console.log(`server started on port ${PORT}`)
 })
